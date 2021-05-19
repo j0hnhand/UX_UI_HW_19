@@ -38,6 +38,7 @@ header p {
     text-align: center;
     line-height: 90vh
 }
+
 .splash.display-none {
     position: fixed;
     opacity: 0;
