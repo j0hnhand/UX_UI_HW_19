@@ -36,7 +36,7 @@ header p {
     z-index: 200;
     color: white;
     text-align: center;
-    line-height: 90vh
+    line-height: 90vh;
 }
 
 .splash.display-none {
@@ -51,7 +51,7 @@ header p {
     color: white;
     text-align: center;
     line-height: 90vh;
-    transition: all 0.5s !important;
+    transition: all 0.5s;
 }
 
 @keyframes fadeIn {
