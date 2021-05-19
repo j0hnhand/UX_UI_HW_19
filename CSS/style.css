@@ -28,7 +28,7 @@ header p {
 /*About Page - GRID ============ */
 
 .heroImg {
-    background-color: #adadad;
+    background-color: #ffffff;
     padding: 50px 15px;
 }
 .content {
@@ -64,6 +64,11 @@ header p {
     grid-area: right;
     text-align: center;
 }
+.copyButton {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
 button {
     padding: 15px;
     background-color: #8ACBBC;
@@ -72,7 +77,15 @@ button {
     border-radius: 10px;
     border-width: 0px;
 }
-
+.iconFlex {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.iconFlex img {
+    max-height: 20%;
+    max-width: 20%;
+}
 
 /*Skills Page - FLEX*/
 
@@ -260,22 +273,64 @@ button {
     border-radius: 20px;
 }
 
-
-/*Footer ================================ */
+/* Footer============================= */
 footer {
     background-color: #0d0d0d;
-    padding: 5px;
+    padding: 50px;
     color: white;
     margin: 0 auto;
 }
+.footGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "footLeft footCenter footRight";
+}
+.footLeft a{
+    color: #8ACBBC;
+}
+.footCenter {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer button {
+    background-color: #8ACBBC;
+    color: #0d0d0d;
+    font-size: 15px;
+    border-radius: 10px;
+    border-width: 0px;
+    /* not sure about... */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 footer ul {
     list-style: none;
-    padding-left: 5px;
+    display: flex;
+    justify-content: center;
 }
 footer li {
     display: inline-block;
-    padding: 0px 7px;
+    padding: 0px 20px 20px 0px;
 }
+.footRight {
+    display: flex;
+}
+.footIconFlex {
+    display: flex;
+    justify-content: flex-end;
+
+}
+.footIconFlex img {
+    max-height: 20%;
+    max-width: 20%;
+    padding: 20px;
+}
+
+
+
 
 
 /*Media Query responsive Flex and Grids ===== */
@@ -300,7 +355,6 @@ footer li {
     .heroImg {
         height: 1100px;
     }
-    
     
     /*Skills resize =============*/
 
@@ -327,7 +381,7 @@ footer li {
     }
 
 
-    /*Gangstas to Growers Section === */
+    /*Gangstas to Growers Resize === */
     .g2gSection {
         padding: 0px 0px 250px 0px;
     }
@@ -346,7 +400,7 @@ footer li {
     }
 
 
-    /*Treasury Section =========== */
+    /*Treasury Resize =========== */
 
     .treasurySection {
         padding: 0px 0px 250px 0px;
@@ -365,7 +419,7 @@ footer li {
         margin-right: auto;
     }
 
-    /*eleemo Section ================= */
+    /*eleemo Resize ================= */
 
     .eleemoSection {
         padding: 0px 0px 400px 0px;
@@ -384,7 +438,39 @@ footer li {
         margin-left: auto;
         margin-right: auto;
     }
+    /* Footer Resize */
+    .footGrid {
+        height: 450px;
+
+        grid-template-rows: 200px 50px 100px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "footLeft"
+        "footCenter"
+        "footRight"
+    }
+    footer li {
+        display: inline-block;
+        padding: 20px 20px 20px 20px;
+        font-size: 14px;
+        color: #0d0d0d;
+    }
+    .footLeft {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+    }
+    .footRight {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        padding: 100px 50px 100px 50px;
+    }
 }
+
+
+
+
 
 /* Preloader ================== */
 
